@@ -1,0 +1,2 @@
+https://learn.microsoft.com/ru-ru/windows-server/identity/ad-fs/deployment/distribute-certificates-to-client-computers-by-using-group-policy
+Конфигурация компьюетера - Политики - Конфигуреция Windows - Параметры безопасности - Политики открытого ключа - (Корневой + не корневой)
