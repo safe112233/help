@@ -1,0 +1,26 @@
+1. Перейти в директорию: C:\Program Files\OpenSSL-Win64\bin\cnf
+1.1 Скопировать: openssl.cnf в директорию "C:\Program Files\OpenSSL-Win64\bin\", как openssl.cnf и openssl-1.cnf
+1.2 В файле openssl-1.cnf
+
+а) раскоменинть "req_extensions = v3_req # The extensions to add to a certificate request"
+б) настроить дефолтные поля
+в) встатвиь альтернативные имена вот так вот:
+
+[ v3_req ]
+
+# Extensions to add to a certificate request
+
+basicConstraints = CA:FALSE
+keyUsage = nonRepudiation, digitalSignature, keyEncipherment
+subjectAltName = @alt_names
+
+[ alt_names ]
+IP.0 = 192.168.99.15
+DNS.0 = iwtm
+DNS.1 = iwtm.demo.lab
+DNS.2 = *.iwtm.demo.lab
+
+[ v3_ca ]
+
+
+# Extensions for a typical CA
